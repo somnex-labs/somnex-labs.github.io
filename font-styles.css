@@ -1,0 +1,16 @@
+@ font-face {
+    font-family: 'Helios Extended';
+    src: url('/fonts/heliosext.woff') format('woff');
+    /* Helios Extended: primary font for titles. */
+}
+
+@ font-face {
+    font-family: 'Roboto Mono';
+    src: url('/fonts/roboto-mono.ttf') format('ttf');
+    /*Roboto Mono: primary text font */
+}
+
+@ font-face {
+    font-family: 'Garamond';
+    src: url('/fonts/garamond.ttf')
+    
