@@ -6,179 +6,112 @@
   <title>Vision</title>
   <!-- Load custom font: Helios Extended (thin variant) -->
   <link rel="stylesheet" href="fonts/helios-extended.css">
+  <link rel="stylesheet" href="assets/theme.css">
   <style>
-    :root {
-      --bg-color: #000000;
-      --text-color: #e0e6ed;
-      --accent-start: #7C4DFF;
-      --accent-mid: #536DFE;
-      --font-title: 'Helios Extended', sans-serif;
-      --font-body: 'Helios Extended', sans-serif;
-      --footnote-color: rgba(224,230,237,0.6);
-      --header-bg: #1a1a1a;
-      --main-bg: #151515;
-      --footer-bg: #0f0f0f;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      position: relative;
-      font-family: var(--font-body);
-      color: var(--text-color);
-      background: var(--bg-color);
-      min-height: 100vh;
       display: grid;
-      grid-template-rows: 12.5vh repeat(4, auto);
+      grid-template-rows: 12.5vh repeat(5, auto);
       row-gap: 2vh;
       padding: 2rem;
       padding-top: calc(2rem + 12.5vh * 0.2);
       align-items: start;
       text-align: center;
     }
-    /* Dot field overlay */
-    body::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.25) 2px, transparent 2px);
-      background-size: 20px 20px;
-      background-repeat: repeat;
-      mask-image: linear-gradient(to bottom, transparent 0%, transparent 50%, black 100%);
-      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 50%, black 100%);
-      z-index: -1;
-    }
+
     /* Header - Title overlay */
     header {
       grid-row: 1;
       align-self: end;
       justify-self: start;
-      z-index: 1000;
+      z-index: 1;
       pointer-events: none;
       margin-left: 3rem;
     }
+
     header h1 {
       font-family: var(--font-title);
       font-size: 12.5vh;
       font-weight: 100;
-      color: white;
+      color: var(--text-on-gradient);
       text-align: left;
       margin: 0;
       line-height: 0.8;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      text-shadow: 0 2px 18px rgba(30, 20, 15, 0.3);
     }
+
     /* Content panels */
     .panel {
+      position: relative;
+      z-index: 1;
       padding: 2rem;
-      background-color: rgba(21,21,21,0.35);
-      backdrop-filter: blur(6px);
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+      background-color: var(--panel-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(60, 40, 30, 0.12);
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     .panel h2 {
       font-family: var(--font-title);
       font-size: 1.5rem;
-      font-weight: 200;
-      color: white;
+      font-weight: 500;
+      color: var(--panel-heading);
       margin-bottom: 1rem;
       text-align: left;
     }
-    .panel h3 {
-      font-family: var(--font-title);
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: white;
-      margin-bottom: 0.5rem;
-      text-align: left;
-    }
+
     .panel p {
       line-height: 1.6;
       font-size: 1.2rem;
       margin: 0 0 1rem 0;
       text-align: left;
+      color: var(--panel-text);
     }
-    .panel:last-of-type p {
-      margin-bottom: 0;
-    }
-    #panel1 { grid-row: 2; background-color: rgba(21,21,21,0.35); margin-top: 2vh; }
-    
-    #panel3 { grid-row: 3; background-color: rgba(21,21,21,0.35); }
-    #panel4 { grid-row: 4; background-color: rgba(19,19,19,0.35); }
-    #panel5 { grid-row: 5; background-color: rgba(21,21,21,0.35); }
-    /* Footer */
-    .footer-nav {
-      width: 100%;
-      max-width: none;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 2rem;
-      padding: 1.5rem 3rem;
-      background: rgba(13,15,18,0.9);
-      border-radius: 0;
-      text-align: left;
-      justify-items: start;
-      justify-content: space-evenly;
-      color: var(--footnote-color);
-      font-size: 0.8rem;
-      position: relative;
-      z-index: 1;
-    }
-    .footer-column {
-      padding: 0 1rem;
-      border-left: 1px solid var(--footnote-color);
-    }
-    .footer-column:first-child {
-      border-left: 1px solid var(--footnote-color);
-    }
-    .footer-column h4 {
-      font-weight: normal;
-      margin-bottom: 0.5rem;
-      color: var(--text-color);
-      font-size: 0.9rem;
-    }
-    .footer-column ul { list-style: none; padding: 0; }
-    .footer-column li { margin-bottom: 0.25rem; }
-    .footer-column a {
-      text-decoration: none;
-      color: var(--footnote-color);
-      transition: color 0.2s;
-    }
-    .footer-column a:hover { color: var(--text-color); }
+
+    .panel:last-of-type p { margin-bottom: 0; }
+
+    #panel1 { grid-row: 2; margin-top: 2vh; }
+    #panel2 { grid-row: 3; }
+    #panel3 { grid-row: 4; background-color: var(--panel-bg-strong); }
+    #panel4 { grid-row: 5; }
+    #panel5 { grid-row: 6; background-color: var(--panel-bg-strong); }
   </style>
 </head>
 <body>
+  <div class="dot-field" id="dotField"></div>
+
   <header>
     <h1>vision</h1>
   </header>
+
   <div id="panel1" class="panel">
     <p>At Somnex, we envision a future where digital tools are less of a layer added over work—and more of a natural extension of it.</p>
   </div>
-    <div id="panel3" class="panel">
+
+  <div id="panel2" class="panel">
     <h2>intuitive interaction</h2>
     <p>We aim to redefine how people interact with technology by making digital tools more intuitive, spatial, and responsive. No more clunky menus or flat interfaces—just fluid, instinctive control that aligns with how we think and move.</p>
   </div>
-    </div>
-    <div id="panel3" class="panel">
-        <h2>seamless integration</h2>
-        <p>Our goal is to bridge the gap between the digital and the physical. Whether you're managing projects, analyzing data, or collaborating across time zones, Somnex integrates these workflows into a single, immersive space designed to reflect the complexity and pace of real-world work.</p>
-    </div>
-</div>
-<div id="panel3" class="panel">
+
+  <div id="panel3" class="panel">
+    <h2>seamless integration</h2>
+    <p>Our goal is to bridge the gap between the digital and the physical. Whether you're managing projects, analyzing data, or collaborating across time zones, Somnex integrates these workflows into a single, immersive space designed to reflect the complexity and pace of real-world work.</p>
+  </div>
+
+  <div id="panel4" class="panel">
     <h2>transition between VR and AR</h2>
     <p>With our proprietary lens and platform design, users can move fluidly between augmented overlays and fully virtual environments. Whether you're anchored in your physical space or diving into a digital workspace, transitions are smooth, continuous, and tailored to your task.</p>
-</div>
-</div>
-<div id="panel3" class="panel">
+  </div>
+
+  <div id="panel5" class="panel">
     <h2>reimagining computing</h2>
     <p>We believe the future of computing is decentralized from devices and powered by remote processing. Instead of relying on dozens of local machines, Somnex taps into cloud and edge computing to deliver performance, flexibility, and immersive capability anywhere. The headset becomes a lightweight access point—a portal to powerful, scalable computing resources that move with you.</p>
-</div>
-<div class="footer-nav">
+  </div>
+
+  <div class="footer-nav">
     <div class="footer-column">
       <h4>The Team</h4>
       <ul>
@@ -210,6 +143,6 @@
     </div>
   </div>
 
+  <script src="assets/dotfield.js"></script>
 </body>
 </html>
-
