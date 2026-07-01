@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Somnex — Releases</title>
+  <link rel="stylesheet" href="dist/styles.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at top, #13233f 0%, #060913 55%, #02050a 100%); color: #f5f7ff; }
+    nav { padding: 1.2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(4,8,16,0.7); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .brand { color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.14em; }
+    .page-shell { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+    .hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2rem; align-items: center; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.22em; color: #8cb7ff; font-size: 0.8rem; margin-bottom: 0.6rem; }
+    h1 { margin: 0 0 0.8rem; font-size: clamp(2rem, 4vw, 2.8rem); }
+    p { line-height: 1.7; color: rgba(245,247,255,0.82); }
+    .cta { display: inline-block; margin-top: 1rem; padding: 0.8rem 1.2rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: #fff; text-decoration: none; }
+    .placeholder-card { padding: 1.2rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.08); box-shadow: 0 20px 50px rgba(0,0,0,0.28); }
+    .placeholder-card svg { width: 100%; height: auto; display: block; }
+    .content-grid { margin-top: 2rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .panel { padding: 1.1rem; border-radius: 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
+    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="brand" href="index.html">SOMNEX</a>
+    <a class="cta" href="index.html">Back home</a>
+  </nav>
+  <main class="page-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Placeholder page</p>
+        <h1>Releases</h1>
+        <p>Release notes, version summaries, and rollout updates will appear here as the platform continues to evolve.</p>
+        <a class="cta" href="index.html">Return to the homepage</a>
+      </div>
+      <div class="placeholder-card" aria-label="Placeholder illustration for releases">
+        <svg viewBox="0 0 600 420" role="img" aria-label="Releases placeholder illustration">
+          <rect x="90" y="80" width="420" height="260" rx="24" fill="#101b32" />
+          <rect x="140" y="130" width="200" height="150" rx="18" fill="#8cb7ff" />
+          <rect x="360" y="120" width="100" height="160" rx="18" fill="#6de8ff" />
+          <rect x="160" y="190" width="140" height="14" rx="7" fill="#ffffff" opacity="0.8" />
+          <rect x="160" y="218" width="150" height="12" rx="6" fill="#ffffff" opacity="0.6" />
+          <rect x="380" y="150" width="60" height="120" rx="10" fill="#ffffff" opacity="0.75" />
+        </svg>
+      </div>
+    </section>
+    <section class="content-grid">
+      <div class="panel">
+        <h3>Version notes</h3>
+        <p>Notable updates and milestones will be archived here.</p>
+      </div>
+      <div class="panel">
+        <h3>Rollout timeline</h3>
+        <p>Upcoming product rollouts will be highlighted soon.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

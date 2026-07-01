@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 
 // Initialize AOS for scroll animations
 AOS.init({
-  duration: 800,
+  duration: 400,
   easing: 'ease-out-cubic',
   once: true,
   offset: 100,

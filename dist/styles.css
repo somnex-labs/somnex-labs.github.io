@@ -106,9 +106,9 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  max-width: 100%;
+  margin: 0;
 }
 
 .nav-logo {
@@ -116,6 +116,7 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.1em;
+  text-decoration: none;
 }
 
 .nav-menu {
