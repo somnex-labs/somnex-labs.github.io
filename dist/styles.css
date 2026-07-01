@@ -95,10 +95,10 @@ p {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--panel-border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
   transition: opacity 0.3s ease-out;
-  display: none;
+  display: block;
 }
 
 .sticky-nav.visible {
@@ -118,7 +118,7 @@ p {
 
 .nav-logo {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
@@ -210,7 +210,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 100;
+  font-weight: 800;
   margin-bottom: 1rem;
   animation: slideGradient 12s linear infinite;
   letter-spacing: -0.02em;
