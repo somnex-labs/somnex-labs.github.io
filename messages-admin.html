@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages Admin — Somnex</title>
+  <link rel="stylesheet" href="dist/styles.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(132deg, var(--grad-1) 0%, var(--grad-2) 24%, var(--grad-3) 48%, var(--grad-4) 72%, var(--grad-5) 100%);
+      background-attachment: fixed;
+      color: #fff;
+    }
+    .page-shell { max-width: 1000px; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+    .panel { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 1.25rem; backdrop-filter: blur(14px); }
+    .login-box, .messages-box { display: none; }
+    .login-box.active, .messages-box.active { display: block; }
+    input { width: 100%; padding: 0.9rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 1rem; }
+    button { padding: 0.9rem 1.2rem; border-radius: 999px; border: none; cursor: pointer; background: rgba(255,255,255,0.16); color: #fff; }
+    .message-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 1rem; margin-bottom: 1rem; }
+    .message-card p { margin: 0.2rem 0; }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <div class="panel login-box active" id="loginBox">
+      <h1>Secure Messages</h1>
+      <p>Sign in to view saved contact submissions.</p>
+      <input id="username" type="text" placeholder="Username" />
+      <input id="password" type="password" placeholder="Password" />
+      <button onclick="attemptLogin()">Log in</button>
+      <p id="loginError" style="color:#ffd0d0; margin-top:0.75rem;"></p>
+    </div>
+
+    <div class="panel messages-box" id="messagesBox">
+      <h1>Saved Messages</h1>
+      <div id="messagesList"></div>
+    </div>
+  </main>
+
+  <script src="src/messages-db.js"></script>
+  <script>
+    const validUser = { username: 'admin', password: 'somnex2026' };
+
+    function attemptLogin() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const error = document.getElementById('loginError');
+
+      if (username === validUser.username && password === validUser.password) {
+        error.textContent = '';
+        document.getElementById('loginBox').classList.remove('active');
+        document.getElementById('messagesBox').classList.add('active');
+        loadMessages();
+      } else {
+        error.textContent = 'Invalid credentials.';
+      }
+    }
+
+    function loadMessages() {
+      const list = document.getElementById('messagesList');
+      list.innerHTML = '<p>Loading…</p>';
+
+      window.SomnexMessages.getAllMessages().then((messages) => {
+        if (!messages.length) {
+          list.innerHTML = '<p>No saved messages yet.</p>';
+          return;
+        }
+
+        list.innerHTML = messages.map((message) => `
+          <div class="message-card">
+            <p><strong>Name:</strong> ${message.name}</p>
+            <p><strong>Email:</strong> ${message.email}</p>
+            <p><strong>Subject:</strong> ${message.subject}</p>
+            <p><strong>Message:</strong> ${message.message}</p>
+            <p><strong>Received:</strong> ${new Date(message.createdAt).toLocaleString()}</p>
+          </div>
+        `).join('');
+      }).catch(() => {
+        list.innerHTML = '<p>Unable to load messages right now.</p>';
+      });
+    }
+  </script>
+</body>
+</html>

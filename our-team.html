@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="logo-image.png" type="image/png" />
+  <title>Our Team — Somnex</title>
+  <link rel="stylesheet" href="dist/styles.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(132deg,
+        var(--grad-1) 0%,
+        var(--grad-2) 24%,
+        var(--grad-3) 48%,
+        var(--grad-4) 72%,
+        var(--grad-5) 100%);
+      background-attachment: fixed;
+      color: #f5f7ff;
+    }
+    .page-shell { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+    .hero { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-bottom: 2rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.22em; color: #8cb7ff; font-size: 0.8rem; margin-bottom: 0.6rem; }
+    h1 { margin: 0 0 0.8rem; font-size: clamp(2rem, 4vw, 2.8rem); }
+    p { line-height: 1.7; color: rgba(245,247,255,0.82); }
+    .cta { display: inline-block; margin-top: 1rem; padding: 0.8rem 1.2rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: #fff; text-decoration: none; }
+    .team-stack { display: grid; gap: 1.2rem; }
+    .team-card {
+      padding: 1.3rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+      backdrop-filter: blur(14px);
+    }
+    .team-card h2 { margin: 0 0 0.35rem; font-size: 1.15rem; }
+    .team-card > p { margin-top: 0; margin-bottom: 0; }
+    .members {
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 1rem;
+    }
+    .member {
+      padding: 0.9rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .member-image {
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(140,183,255,0.25), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .member-image::before {
+      content: "";
+      width: 56%;
+      height: 56%;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.35);
+      box-shadow: inset 0 0 0 14px rgba(255,255,255,0.06);
+    }
+    .member h3 { margin: 0; font-size: 1rem; }
+    .member p { margin: 0; font-size: 0.95rem; }
+    @media (max-width: 760px) {
+      .page-shell { padding: 3rem 1rem 2rem; }
+      .members { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">SOMNEX</a>
+      <button class="mobile-menu-btn" data-mobile-menu-btn>☰</button>
+      <div class="nav-menu" data-mobile-menu>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="vision.html">Vision</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main class="page-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">People behind the platform</p>
+        <h1>Our Team</h1>
+        <p>Somnex brings together specialists across engineering, hardware systems, and business strategy to build immersive tools that are practical, reliable, and human-centered.</p>
+      </div>
+    </section>
+
+    <section class="team-stack">
+      <div class="team-card">
+        <h2>Software Team</h2>
+        <p>Building the experiences, interfaces, and intelligent systems that power our products.</p>
+        <div class="members">
+          <div class="member">
+            <div class="member-image" aria-hidden="true"></div>
+            <p>Placeholder profile</p>
+          </div>
+          <div class="member">
+            <div class="member-image" aria-hidden="true"></div>
+            <p>Placeholder profile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <h2>Hardware Team</h2>
+        <p>Designing and integrating the sensing, display, and device layers that make immersive workflows possible.</p>
+        <div class="members">
+          <div class="member">
+            <div class="member-image" aria-hidden="true"></div>
+            <p>Placeholder profile</p>
+          </div>
+          <div class="member">
+            <div class="member-image" aria-hidden="true"></div>
+            <p>Placeholder profile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <h2>Business Team</h2>
+        <p>Connecting product direction with partnerships, operations, and long-term growth.</p>
+        <div class="members">
+          <div class="member">
+            <div class="member-image" aria-hidden="true"></div>
+            <p>Placeholder profile</p>
+          </div>
+          <div class="member">
+            <div class="member-image" aria-hidden="true"></div>
+            <p>Placeholder profile</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-nav">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="0">
+      <h4>The Team</h4>
+      <ul>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="governance.html">Governance</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="releases.html">Releases</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+      <h4>Careers</h4>
+      <ul>
+        <li><a href="join-the-team.html">Join the Team</a></li>
+        <li><a href="openings.html">Openings</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+    });
+
+    const stickyNav = document.querySelector('.sticky-nav');
+    let lastScrollY = 0;
+    let ticking = false;
+
+    const updateNavVisibility = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 200) {
+        stickyNav.classList.add('visible');
+      } else {
+        stickyNav.classList.remove('visible');
+      }
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavVisibility);
+        ticking = true;
+      }
+    });
+
+    const mobileMenuBtn = document.querySelector('[data-mobile-menu-btn]');
+    const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
