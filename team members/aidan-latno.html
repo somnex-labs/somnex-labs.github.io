@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maya Ito — Somnex</title>
+  <link rel="stylesheet" href="../dist/styles.css" />
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(132deg, #07111f 0%, #0c1b35 45%, #0a1025 100%);
+      color: #f5f7ff;
+    }
+    .page-shell { max-width: 900px; margin: 0 auto; padding: 5rem 1.25rem 3rem; }
+    .profile-card {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.25);
+      backdrop-filter: blur(14px);
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.22em; color: #8cb7ff; font-size: 0.8rem; }
+    h1 { margin: 0.4rem 0 0.6rem; font-size: clamp(2rem, 4vw, 2.6rem); }
+    .role { color: #cfe0ff; font-size: 1rem; margin-bottom: 1rem; }
+    p { line-height: 1.75; color: rgba(255,255,255,0.84); }
+    .back-link { display: inline-block; margin-top: 1.2rem; color: #fff; text-decoration: none; background: rgba(255,255,255,0.1); padding: 0.75rem 1rem; border-radius: 999px; }
+    .meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .meta div { padding: 0.95rem; border-radius: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); }
+    @media (max-width: 700px) { .meta { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="profile-card">
+      <p class="eyebrow">Software Team</p>
+      <h1>Aidan Latno</h1>
+      <p class="role">Principal Rendering Engineer</p>
+      <p>Aidan focuses on the visual and rendering experience, ensuring interfaces and immersive scenes feel polished and responsive.</p>
+      <div class="meta">
+        <div>
+          <strong>Focus</strong>
+          <p>Machine learning, data pipelines, and model evaluation.</p>
+        </div>
+        <div>
+          <strong>Current work</strong>
+          <p>Improving real-time sensing and context-aware recommendations.</p>
+        </div>
+      </div>
+      <a class="back-link" href="../our-team.html">← Back to Our Team</a>
+    </section>
+  </main>
+</body>
+</html>
