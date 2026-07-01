@@ -6,13 +6,13 @@
 
 @font-face {
     font-family: 'Roboto Mono';
-    src: url('/fonts/roboto-mono.ttf') format('ttf');
+    src: url('/fonts/roboto-mono.ttf') format('truetype');
     /*Roboto Mono: primary text font */
 }
 
 @font-face {
     font-family: 'Garamond';
-    src: url('/fonts/EBGaramond-VariableFont_wght.ttf') format('ttf');
+    src: url('/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
     /*Garamond: secondary text font */
 }
 
