@@ -3,60 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somnex — Terms of Use</title>
+  <link rel="icon" href="logo-image.png" type="image/png" />
+  <title>Terms of Use — Somnex</title>
+  <link rel="stylesheet" href="fonts/helios-extended.css">
   <link rel="stylesheet" href="dist/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    :root { color-scheme: dark; }
-    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at top, #13233f 0%, #060913 55%, #02050a 100%); color: #f5f7ff; }
-    nav { padding: 1.2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(4,8,16,0.7); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.12); }
-    .brand { color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.14em; }
-    .page-shell { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
-    .hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2rem; align-items: center; }
-    .eyebrow { text-transform: uppercase; letter-spacing: 0.22em; color: #8cb7ff; font-size: 0.8rem; margin-bottom: 0.6rem; }
-    h1 { margin: 0 0 0.8rem; font-size: clamp(2rem, 4vw, 2.8rem); }
-    p { line-height: 1.7; color: rgba(245,247,255,0.82); }
-    .cta { display: inline-block; margin-top: 1rem; padding: 0.8rem 1.2rem; border-radius: 999px; background: rgba(255,255,255,0.12); color: #fff; text-decoration: none; }
-    .placeholder-card { padding: 1.2rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.08); box-shadow: 0 20px 50px rgba(0,0,0,0.28); }
-    .placeholder-card svg { width: 100%; height: auto; display: block; }
-    .content-grid { margin-top: 2rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .panel { padding: 1.1rem; border-radius: 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
-    @media (max-width: 760px) { .hero { grid-template-columns: 1fr; } }
+    .policy-shell {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 1.25rem 3rem;
+    }
+    .policy-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 24px;
+      padding: 2rem;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+    }
+    .policy-card h1 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .policy-card h2 {
+      color: #fff;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .policy-card p,
+    .policy-card li {
+      color: rgba(255,255,255,0.84);
+      line-height: 1.75;
+    }
+    .policy-card ul {
+      padding-left: 1.25rem;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a class="brand" href="index.html">SOMNEX</a>
-    <a class="cta" href="index.html">Back home</a>
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">SOMNEX</a>
+      <button class="mobile-menu-btn" data-mobile-menu-btn>☰</button>
+      <div class="nav-menu" data-mobile-menu>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="vision.html">Vision</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </nav>
-  <main class="page-shell">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Placeholder page</p>
-        <h1>Terms of Use</h1>
-        <p>Somnex will publish a set of terms covering responsible use of its platform, services, and content in a future update.</p>
-        <a class="cta" href="index.html">Return to the homepage</a>
-      </div>
-      <div class="placeholder-card" aria-label="Placeholder illustration for terms of use">
-        <svg viewBox="0 0 600 420" role="img" aria-label="Terms of use placeholder illustration">
-          <rect x="90" y="80" width="420" height="260" rx="24" fill="#101b32" />
-          <rect x="140" y="120" width="300" height="180" rx="20" fill="#8cb7ff" />
-          <rect x="170" y="150" width="120" height="16" rx="8" fill="#ffffff" opacity="0.85" />
-          <rect x="170" y="182" width="200" height="14" rx="7" fill="#ffffff" opacity="0.7" />
-          <rect x="170" y="208" width="160" height="14" rx="7" fill="#ffffff" opacity="0.6" />
-          <circle cx="420" cy="190" r="36" fill="#6de8ff" />
-        </svg>
-      </div>
-    </section>
-    <section class="content-grid">
-      <div class="panel">
-        <h3>Use guidelines</h3>
-        <p>Rules and responsibilities for platform use will be detailed here.</p>
-      </div>
-      <div class="panel">
-        <h3>Compliance</h3>
-        <p>Additional legal and policy information will be added soon.</p>
-      </div>
+
+  <main class="policy-shell">
+    <section class="policy-card" data-aos="fade-in">
+      <h1>Terms of Use</h1>
+      <p>By using Somnex’s website and services, you agree to use them lawfully and respectfully. These terms outline the basic rules for website access and interaction.</p>
+
+      <h2>Use of the Site</h2>
+      <p>You may use the site for lawful informational and business purposes. You agree not to disrupt the site, attempt unauthorized access, or upload harmful content.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>All content, branding, and materials on the site are owned by Somnex unless otherwise stated. You may not reproduce or distribute them without permission.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>Somnex provides the site on an as-is basis and is not liable for incidental, consequential, or indirect damages arising from site use.</p>
+
+      <h2>Changes to These Terms</h2>
+      <p>We may update these terms from time to time. Continued use of the site after changes are posted means you accept the updated terms.</p>
     </section>
   </main>
+
+  <footer class="footer-nav">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="0">
+      <h4>The Team</h4>
+      <ul>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="governance.html">Governance</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="releases.html">Releases</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+      <h4>Careers</h4>
+      <ul>
+        <li><a href="join-the-team.html">Join the Team</a></li>
+        <li><a href="openings.html">Openings</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+
+    const stickyNav = document.querySelector('.sticky-nav');
+    let ticking = false;
+
+    const updateNavVisibility = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 200) {
+        stickyNav.classList.add('visible');
+      } else {
+        stickyNav.classList.remove('visible');
+      }
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavVisibility);
+        ticking = true;
+      }
+    });
+
+    const mobileMenuBtn = document.querySelector('[data-mobile-menu-btn]');
+    const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

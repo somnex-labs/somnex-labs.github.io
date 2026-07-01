@@ -7,6 +7,8 @@
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/output.css",
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch",
+    "blog:update": "python3 scripts/generate-blog-index.py",
+    "blog:watch": "python3 scripts/generate-blog-index.py --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

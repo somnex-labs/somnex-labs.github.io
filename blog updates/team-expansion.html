@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="blog-title" content="Team Expansion Announced" />
+  <meta name="blog-date" content="2026-04-10" />
+  <meta name="blog-tags" content="Team, Announcement" />
+  <meta name="blog-excerpt" content="An introduction to the newest additions across engineering, hardware, and operations." />
+  <title>Team Expansion — Somnex</title>
+  <link rel="stylesheet" href="../dist/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #f6f7fb;
+      background: linear-gradient(135deg, #050816 0%, #10182d 45%, #1b2540 100%);
+    }
+    .page-shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.25rem 3rem;
+    }
+    .hero-card {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1.5rem;
+      align-items: center;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 28px;
+      padding: 2rem;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.26);
+      margin-bottom: 1.25rem;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #8cc1ff;
+      margin-bottom: 0.8rem;
+    }
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      color: #fff;
+    }
+    p {
+      line-height: 1.75;
+      color: rgba(255,255,255,0.84);
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 0;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.42rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      font-size: 0.88rem;
+    }
+    .content-block {
+      padding: 1.4rem 1.5rem;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      overflow: hidden;
+    }
+    .image-frame {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+      width: min(320px, 100%);
+      float: right;
+      margin: 0 0 1rem 1.25rem;
+    }
+    .image-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    @media (max-width: 860px) {
+      .hero-card { grid-template-columns: 1fr; }
+      .image-frame { float: none; width: 100%; margin: 0 0 1rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <a class="back-link" href="../blog.html">← Back to blog</a>
+    <section class="hero-card">
+      <div>
+        <span class="eyebrow">Team announcement</span>
+        <h1>Team Expansion Announced</h1>
+        <p>This post will hold the announcement and details around the team’s latest hires and the growing mix of technical and operational expertise behind Somnex.</p>
+        <div class="pill-row">
+          <span class="pill">Team</span>
+          <span class="pill">Announcement</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="image-frame" aria-label="Featured illustration for the team announcement">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Team collaboration illustration" />
+      </div>
+      <p>More details will be shared as the organization continues to grow. This article is designed to look and feel consistent with the rest of the Somnex content system.</p>
+      <p>Future updates can include leadership notes, hiring milestones, or a more detailed company story.</p>
+    </section>
+  </main>
+</body>
+</html>
