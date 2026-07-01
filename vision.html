@@ -3,146 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vision</title>
-  <!-- Load custom font: Helios Extended (thin variant) -->
+  <title>Vision — Somnex</title>
+  
+  <!-- Fonts -->
   <link rel="stylesheet" href="fonts/helios-extended.css">
-  <link rel="stylesheet" href="assets/theme.css">
-  <style>
-    body {
-      display: grid;
-      grid-template-rows: 12.5vh repeat(5, auto);
-      row-gap: 2vh;
-      padding: 2rem;
-      padding-top: calc(2rem + 12.5vh * 0.2);
-      align-items: start;
-      text-align: center;
-    }
-
-    /* Header - Title overlay */
-    header {
-      grid-row: 1;
-      align-self: end;
-      justify-self: start;
-      z-index: 1;
-      pointer-events: none;
-      margin-left: 3rem;
-    }
-
-    header h1 {
-      font-family: var(--font-title);
-      font-size: 12.5vh;
-      font-weight: 100;
-      color: var(--text-on-gradient);
-      text-align: left;
-      margin: 0;
-      line-height: 0.8;
-      text-shadow: 0 2px 18px rgba(30, 20, 15, 0.3);
-    }
-
-    /* Content panels */
-    .panel {
-      position: relative;
-      z-index: 1;
-      padding: 2rem;
-      background-color: var(--panel-bg);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--panel-border);
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(60, 40, 30, 0.12);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .panel h2 {
-      font-family: var(--font-title);
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: var(--panel-heading);
-      margin-bottom: 1rem;
-      text-align: left;
-    }
-
-    .panel p {
-      line-height: 1.6;
-      font-size: 1.2rem;
-      margin: 0 0 1rem 0;
-      text-align: left;
-      color: var(--panel-text);
-    }
-
-    .panel:last-of-type p { margin-bottom: 0; }
-
-    #panel1 { grid-row: 2; margin-top: 2vh; }
-    #panel2 { grid-row: 3; }
-    #panel3 { grid-row: 4; background-color: var(--panel-bg-strong); }
-    #panel4 { grid-row: 5; }
-    #panel5 { grid-row: 6; background-color: var(--panel-bg-strong); }
-  </style>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="dist/styles.css" />
+  
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <div class="dot-field" id="dotField"></div>
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <div class="nav-logo">SOMNEX</div>
+      <button class="mobile-menu-btn" data-mobile-menu-btn>☰</button>
+      <div class="nav-menu" data-mobile-menu>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="vision.html">Vision</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <header>
-    <h1>vision</h1>
-  </header>
+  <!-- Page Content -->
+  <main class="page-content">
+    <header class="page-header" data-aos="fade-in">
+      <h1>vision</h1>
+    </header>
 
-  <div id="panel1" class="panel">
-    <p>At Somnex, we envision a future where digital tools are less of a layer added over work—and more of a natural extension of it.</p>
-  </div>
+    <div class="panel" data-aos="slide-up" data-aos-delay="100">
+      <p>At Somnex, we envision a future where digital tools are less of a layer added over work—and more of a natural extension of it.</p>
+    </div>
 
-  <div id="panel2" class="panel">
-    <h2>intuitive interaction</h2>
-    <p>We aim to redefine how people interact with technology by making digital tools more intuitive, spatial, and responsive. No more clunky menus or flat interfaces—just fluid, instinctive control that aligns with how we think and move.</p>
-  </div>
+    <div class="panel" data-aos="slide-up" data-aos-delay="200">
+      <h2>intuitive interaction</h2>
+      <p>We aim to redefine how people interact with technology by making digital tools more intuitive, spatial, and responsive. No more clunky menus or flat interfaces—just fluid, instinctive control that aligns with how we think and move.</p>
+    </div>
 
-  <div id="panel3" class="panel">
-    <h2>seamless integration</h2>
-    <p>Our goal is to bridge the gap between the digital and the physical. Whether you're managing projects, analyzing data, or collaborating across time zones, Somnex integrates these workflows into a single, immersive space designed to reflect the complexity and pace of real-world work.</p>
-  </div>
+    <div class="panel panel-strong" data-aos="slide-up" data-aos-delay="300">
+      <h2>seamless integration</h2>
+      <p>Our goal is to bridge the gap between the digital and the physical. Whether you're managing projects, analyzing data, or collaborating across time zones, Somnex integrates these workflows into a single, immersive space designed to reflect the complexity and pace of real-world work.</p>
+    </div>
 
-  <div id="panel4" class="panel">
-    <h2>transition between VR and AR</h2>
-    <p>With our proprietary lens and platform design, users can move fluidly between augmented overlays and fully virtual environments. Whether you're anchored in your physical space or diving into a digital workspace, transitions are smooth, continuous, and tailored to your task.</p>
-  </div>
+    <div class="panel" data-aos="slide-up" data-aos-delay="400">
+      <h2>transition between VR and AR</h2>
+      <p>With our proprietary lens and platform design, users can move fluidly between augmented overlays and fully virtual environments. Whether you're anchored in your physical space or diving into a digital workspace, transitions are smooth, continuous, and tailored to your task.</p>
+    </div>
 
-  <div id="panel5" class="panel">
-    <h2>reimagining computing</h2>
-    <p>We believe the future of computing is decentralized from devices and powered by remote processing. Instead of relying on dozens of local machines, Somnex taps into cloud and edge computing to deliver performance, flexibility, and immersive capability anywhere. The headset becomes a lightweight access point—a portal to powerful, scalable computing resources that move with you.</p>
-  </div>
+    <div class="panel panel-strong" data-aos="slide-up" data-aos-delay="500">
+      <h2>reimagining computing</h2>
+      <p>We believe the future of computing is decentralized from devices and powered by remote processing. Instead of relying on dozens of local machines, Somnex taps into cloud and edge computing to deliver performance, flexibility, and immersive capability anywhere. The headset becomes a lightweight access point—a portal to powerful, scalable computing resources that move with you.</p>
+    </div>
+  </main>
 
-  <div class="footer-nav">
-    <div class="footer-column">
+  <!-- Footer -->
+  <footer class="footer-nav">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="0">
       <h4>The Team</h4>
       <ul>
-        <li><a href="/executive-board.html">Executive Board</a></li>
-        <li><a href="/board-of-directors.html">Board of Directors</a></li>
+        <li><a href="#">Executive Board</a></li>
+        <li><a href="#">Board of Directors</a></li>
       </ul>
     </div>
-    <div class="footer-column">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
       <h4>Resources</h4>
       <ul>
-        <li><a href="documentation.html">Documentation</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="releases.html">Releases</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Releases</a></li>
       </ul>
     </div>
-    <div class="footer-column">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
       <h4>Careers</h4>
       <ul>
-        <li><a href="careers.html">Join the Team</a></li>
-        <li><a href="careers.html#openings">Openings</a></li>
+        <li><a href="#">Join the Team</a></li>
+        <li><a href="#">Openings</a></li>
       </ul>
     </div>
-    <div class="footer-column">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
       <h4>Legal</h4>
       <ul>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
       </ul>
     </div>
-  </div>
+  </footer>
 
-  <script src="assets/dotfield.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+    });
+
+    // Sticky navigation visibility
+    const stickyNav = document.querySelector('.sticky-nav');
+    let lastScrollY = 0;
+    let ticking = false;
+
+    const updateNavVisibility = () => {
+      const scrollY = window.scrollY;
+      
+      if (scrollY > 200) {
+        stickyNav.classList.add('visible');
+      } else {
+        stickyNav.classList.remove('visible');
+      }
+      
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavVisibility);
+        ticking = true;
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('[data-mobile-menu-btn]');
+    const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
