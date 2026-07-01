@@ -134,19 +134,8 @@ p {
   transition: color 0.3s ease;
 }
 
-.nav-menu a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #ffffff;
-  transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after {
-  width: 100%;
+.nav-menu a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .mobile-menu-btn {
