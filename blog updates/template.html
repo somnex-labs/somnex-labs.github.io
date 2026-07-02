@@ -93,8 +93,23 @@
     }
   </style>
 </head>
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <a href="somnexlabs.github.io/index.html" class="nav-logo">SOMNEX</a>
+      <button class="mobile-menu-btn" data-mobile-menu-btn>☰</button>
+      <div class="nav-menu" data-mobile-menu>
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="vision.html">Vision</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
 <body>
   <main class="page-shell">
+    
     <section class="hero-card">
       <div>
         <span class="eyebrow">Template post</span>
@@ -114,5 +129,90 @@
       <p>This placement gives the page a more magazine-like editorial feel, with the image supporting the written story instead of sitting beside the title.</p>
     </section>
   </main>
+    <!-- Footer -->
+  <footer class="footer-nav">
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="0">
+      <h4>The Team</h4>
+      <ul>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="governance.html">Governance</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="releases.html">Releases</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+      <h4>Careers</h4>
+      <ul>
+        <li><a href="join-the-team.html">Join the Team</a></li>
+        <li><a href="openings.html">Openings</a></li>
+      </ul>
+    </div>
+    <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+    });
+
+    // Sticky navigation visibility
+    const stickyNav = document.querySelector('.sticky-nav');
+    let lastScrollY = 0;
+    let ticking = false;
+
+    const updateNavVisibility = () => {
+      const scrollY = window.scrollY;
+      
+      if (scrollY > 200) {
+        stickyNav.classList.add('visible');
+      } else {
+        stickyNav.classList.remove('visible');
+      }
+      
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavVisibility);
+        ticking = true;
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('[data-mobile-menu-btn]');
+    const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
