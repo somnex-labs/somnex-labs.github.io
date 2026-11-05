@@ -150,7 +150,7 @@ p { line-height: 1.75; }
 .hero {
   position: relative; min-height: 100vh; min-height: 100dvh; overflow: hidden;
   display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-  padding: calc(var(--nav-h) + 1rem) 1.5rem 5rem;
+  padding: calc(var(--nav-h) + 1rem) 1.5rem 3rem;
 }
 .hero-title {
   font-size: clamp(3.2rem, 15vw, 10rem); letter-spacing: 0.04em; line-height: 0.95;
@@ -164,25 +164,6 @@ p { line-height: 1.75; }
 }
 .hero-subtitle::before, .hero-subtitle::after { content: ''; width: clamp(24px, 8vw, 80px); height: 2px; background: var(--lime); }
 .pill-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-
-.hero-meta {
-  position: absolute; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--dim);
-  line-height: 1.8;
-}
-.hero-meta b { color: var(--text); font-weight: 700; }
-.hero-meta.tl { top: calc(var(--nav-h) + 1.25rem); left: 1.25rem; }
-.hero-meta.tr { top: calc(var(--nav-h) + 1.25rem); right: 1.25rem; text-align: right; }
-@media (max-width: 600px) { .hero-meta { display: none; } }
-
-.ticker {
-  position: absolute; left: 0; right: 0; bottom: 0; overflow: hidden;
-  background: var(--lime); color: #000; border-top: 2px solid #000;
-  font-weight: 700; font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; white-space: nowrap;
-}
-.ticker-track { display: inline-flex; padding: 0.7rem 0; animation: ticker 28s linear infinite; }
-.ticker-track span { padding-right: 2.5rem; }
-.ticker-track span::after { content: '✕'; margin-left: 2.5rem; color: var(--pink); }
-@keyframes ticker { to { transform: translateX(-50%); } }
 
 @keyframes glitch {
   0%, 100% { transform: none; clip-path: none; }
@@ -411,6 +392,6 @@ a.member:hover h3 { color: var(--lime); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; clip-path: none; transition: none; }
-  .hero-title, .ticker-track { animation: none; }
+  .hero-title { animation: none; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }

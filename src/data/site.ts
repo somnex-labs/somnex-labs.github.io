@@ -8,7 +8,7 @@ export const nav = [
 export const footer = [
   { title: 'The Team', links: [{ href: '/our-team', label: 'Our Team' }, { href: '/governance', label: 'Governance' }] },
   { title: 'Resources', links: [{ href: '/documentation', label: 'Documentation' }, { href: '/blog', label: 'Blog' }, { href: '/releases', label: 'Releases' }] },
-  { title: 'Careers', links: [{ href: '/join-the-team', label: 'Join the Team' }, { href: '/openings', label: 'Openings' }] },
+  { title: 'Careers', links: [{ href: '/join-the-team', label: 'Join the Team' }, { href: '/mission', label: 'Mission' }] },
   { title: 'Legal', links: [{ href: '/privacy-policy', label: 'Privacy Policy' }, { href: '/terms-of-use', label: 'Terms of Use' }] },
 ];
 

@@ -6,6 +6,7 @@ export default defineConfig({
   // Emit about_us.html, blog.html, ... so every existing URL keeps working.
   build: { format: 'file' },
   trailingSlash: 'never',
+  redirects: { '/openings': '/join-the-team' },
   integrations: [sitemap()],
   prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
 });
