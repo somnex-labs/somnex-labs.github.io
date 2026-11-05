@@ -1,6 +1,6 @@
 ---
 name: Deep Singh
-role: Principal Systems Engineer
+role: CTO
 team: Software
 order: 1
 focus: Interaction design, frontend architecture, and performance.

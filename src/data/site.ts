@@ -13,7 +13,7 @@ export const footer = [
 ];
 
 export const teams = [
-  { name: 'Software', blurb: 'Building the experiences, interfaces, and intelligent systems that power our products.' },
-  { name: 'Hardware', blurb: 'Designing and integrating the sensing, display, and device layers that make immersive workflows possible.' },
-  { name: 'Business', blurb: 'Connecting product direction with partnerships, operations, and long-term growth.' },
+  { name: 'Software', color: 'var(--lime)', blurb: 'Building the experiences, interfaces, and intelligent systems that power our products.' },
+  { name: 'Hardware', color: 'var(--cyan)', blurb: 'Designing and integrating the sensing, display, and device layers that make immersive workflows possible.' },
+  { name: 'Business', color: 'var(--pink)', blurb: 'Connecting product direction with partnerships, operations, and long-term growth.' },
 ] as const;

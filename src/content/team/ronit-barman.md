@@ -1,6 +1,6 @@
 ---
 name: Ronit Barman
-role: Senior Engineer
+role: Intern
 team: Hardware
 order: 2
 focus: Display calibration, optics, and human factors.

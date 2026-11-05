@@ -1,6 +1,6 @@
 ---
 name: Karl Salisbury
-role: Operations Team Member
+role: Intern
 team: Business
 order: 2
 hasProfile: false

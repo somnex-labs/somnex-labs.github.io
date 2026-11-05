@@ -16,7 +16,7 @@ const people = (await getCollection('team')).sort((a, b) => a.data.order - b.dat
 
     <div class="team-stack">
       {teams.map((t, i) => (
-        <section class="panel reveal" data-label={`0${i + 1} // Team`}>
+        <section class="panel reveal" data-label={`0${i + 1} // Team`} style={`--b:${t.color}`}>
           <h2>{t.name} Team</h2>
           <p>{t.blurb}</p>
           <div class="members">

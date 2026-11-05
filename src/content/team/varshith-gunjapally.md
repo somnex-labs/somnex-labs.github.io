@@ -1,6 +1,6 @@
 ---
 name: Varshith Gunjapally
-role: Strategy & Ops Lead
+role: COO
 team: Business
 order: 1
 focus: Relationship building, market alignment, and go-to-market planning.

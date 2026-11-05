@@ -1,6 +1,6 @@
 ---
 name: Krish Nirmale
-role: Hardware Lead
+role: CEO
 team: Hardware
 order: 1
 focus: Embedded systems, sensing hardware, and prototyping.
