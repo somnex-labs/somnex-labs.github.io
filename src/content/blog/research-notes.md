@@ -2,9 +2,9 @@
 title: XR Workflow Research Notes
 date: 2026-05-28
 tags: [Research, XR]
-excerpt: Highlights from our latest research on spatial interfaces and professional workflow design.
+excerpt: Highlights from our latest research on spatial interfaces and hands-on machine training.
 eyebrow: Research notes
-intro: This entry will hold the team’s reflections on spatial workflows, immersive product design, and the ways Somnex can support more useful experiences.
+intro: This entry will hold the team’s reflections on spatial interfaces, immersive training design, and the ways Somnex can help people learn to work with machines.
 image: https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80
 imageAlt: Research and analytics illustration
 ---
