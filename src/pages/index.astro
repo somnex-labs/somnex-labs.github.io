@@ -4,12 +4,23 @@ import Base from '../layouts/Base.astro';
 
 <Base>
   <section class="hero">
+    <div class="hero-meta tl reveal"><b>Somnex Inc.</b><br />Extended Reality<br />Hardware × Software</div>
+    <div class="hero-meta tr reveal"><b>Est. 2024</b><br />XR headset for<br />engineering work</div>
     <h1 class="hero-title reveal">SOMNEX</h1>
     <p class="hero-subtitle reveal" style="--d:100ms">Integrating Worlds</p>
     <div class="pill-links reveal" style="--d:200ms">
       <a class="pill-btn" href="/about_us">About</a>
       <a class="pill-btn" href="/vision">Vision</a>
       <a class="pill-btn" href="/contact">Contact</a>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        {[0, 1].map(() => (
+          <>
+            <span>Integrating Worlds</span><span>Extended Reality</span><span>Deep Work</span><span>Hardware × Software</span><span>Spatial Computing</span>
+          </>
+        ))}
+      </div>
     </div>
   </section>
 </Base>

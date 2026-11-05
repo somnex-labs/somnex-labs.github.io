@@ -17,7 +17,7 @@ const panels = [
     </header>
     <div class="grid">
       {panels.map((p, i) => (
-        <section class="panel reveal" style={`--d:${i * 80}ms`}>
+        <section class="panel reveal" data-label={`0${i + 1} // Principle`} style={`--d:${i * 80}ms`}>
           <h2>{p.title}</h2>
           <p>{p.text}</p>
         </section>

@@ -23,7 +23,7 @@ const fmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', 
 
     <div class="post-grid">
       {posts.map((p, i) => (
-        <article class="card post-card reveal" style={`--d:${i * 60}ms`} data-tags={p.data.tags.join('|')}>
+        <article class="card post-card reveal" data-label={`Log ${String(posts.length - i).padStart(2, "0")}`} style={`--d:${i * 60}ms`} data-tags={p.data.tags.join('|')}>
           <div class="tag-list">{p.data.tags.map((t) => <span class="tag">{t}</span>)}</div>
           <h3>{p.data.title}</h3>
           <div class="meta"><time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time></div>

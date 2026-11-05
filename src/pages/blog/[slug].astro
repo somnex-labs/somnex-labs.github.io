@@ -17,13 +17,13 @@ const src = image?.includes('images.unsplash.com') ? image.replace(/w=\d+/, 'w=7
 <Base title={title} description={excerpt}>
   <div class="page">
     <a class="back-link" href="/blog">← Back to blog</a>
-    <header class="panel article-hero reveal">
+    <header class="panel article-hero reveal" data-label="Transmission">
       {eyebrow && <p class="eyebrow">{eyebrow}</p>}
       <h1>{title}</h1>
       <p>{intro ?? excerpt}</p>
       <div class="tag-list">{tags.map((t) => <span class="tag">{t}</span>)}</div>
     </header>
-    <article class="panel article-body reveal">
+    <article class="panel article-body reveal" data-label="Entry">
       {src && <div class="article-image"><img src={src} alt={imageAlt} width="720" height="540" decoding="async" /></div>}
       <Content />
     </article>

@@ -2,13 +2,20 @@
 import { footer } from '../data/site';
 ---
 
-<footer class="site-footer">
-  {footer.map((col) => (
-    <div class="footer-column">
-      <h4>{col.title}</h4>
-      <ul>
-        {col.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
-      </ul>
-    </div>
-  ))}
-</footer>
+<div class="site-footer-wrap">
+  <footer class="site-footer">
+    {footer.map((col) => (
+      <div class="footer-column">
+        <h4>{col.title}</h4>
+        <ul>
+          {col.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+    ))}
+  </footer>
+  <div class="footer-base">
+    <span>© {new Date().getFullYear()} Somnex Inc.</span>
+    <span class="barcode" aria-hidden="true"></span>
+    <span>Integrating Worlds</span>
+  </div>
+</div>

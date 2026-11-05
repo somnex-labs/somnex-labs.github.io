@@ -18,7 +18,7 @@ const { title, blurb, panels } = Astro.props;
     </header>
     <div class="grid">
       {panels.map((p, i) => (
-        <section class="panel reveal" style={`--d:${i * 80}ms`}>
+        <section class="panel reveal" data-label={`0${i + 1} // Pending`} style={`--d:${i * 80}ms`}>
           <h3>{p.title}</h3>
           <p>{p.text}</p>
         </section>
