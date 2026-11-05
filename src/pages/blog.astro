@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const posts = (await getCollection('blog', (p) => !p.data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const tags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+const fmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+---
+
+<Base title="Blog Updates" description="The latest updates, product notes, and milestones from the Somnex team.">
+  <div class="page">
+    <header class="page-header reveal">
+      <h1>Blog Updates</h1>
+      <p>Read the latest updates, product notes, and milestones from the Somnex team.</p>
+    </header>
+
+    <div class="filters reveal" id="filters" role="group" aria-label="Filter posts by tag">
+      <button class="filter-btn" type="button" data-tag="" aria-pressed="true">All</button>
+      {tags.map((t) => <button class="filter-btn" type="button" data-tag={t} aria-pressed="false">{t}</button>)}
+    </div>
+
+    <div class="post-grid">
+      {posts.map((p, i) => (
+        <article class="card post-card reveal" style={`--d:${i * 60}ms`} data-tags={p.data.tags.join('|')}>
+          <div class="tag-list">{p.data.tags.map((t) => <span class="tag">{t}</span>)}</div>
+          <h3>{p.data.title}</h3>
+          <div class="meta"><time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time></div>
+          <p>{p.data.excerpt}</p>
+          <a class="more stretch" href={`/blog/${p.id}`}>Read more →</a>
+        </article>
+      ))}
+    </div>
+  </div>
+</Base>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const bar = document.getElementById('filters');
+    if (!bar) return;
+    const cards = document.querySelectorAll<HTMLElement>('.post-card');
+    bar.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.filter-btn');
+      if (!btn) return;
+      bar.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      const tag = btn.dataset.tag;
+      cards.forEach((c) => { c.hidden = !!tag && !(c.dataset.tags ?? '').split('|').includes(tag); });
+    });
+  });
+</script>

@@ -1,0 +1,14 @@
+---
+import { footer } from '../data/site';
+---
+
+<footer class="site-footer">
+  {footer.map((col) => (
+    <div class="footer-column">
+      <h4>{col.title}</h4>
+      <ul>
+        {col.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </div>
+  ))}
+</footer>

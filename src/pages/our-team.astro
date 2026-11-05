@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { teams } from '../data/site';
+
+const people = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Our Team" description="The engineers and operators building Somnex.">
+  <div class="page">
+    <header class="page-header reveal">
+      <p class="eyebrow">People behind the platform</p>
+      <h1>Our Team</h1>
+      <p>Somnex brings together specialists across engineering, hardware systems, and business strategy to build immersive tools that are practical, reliable, and human-centered.</p>
+    </header>
+
+    <div class="team-stack">
+      {teams.map((t) => (
+        <section class="panel reveal">
+          <h2>{t.name} Team</h2>
+          <p>{t.blurb}</p>
+          <div class="members">
+            {people.filter((p) => p.data.team === t.name).map((p) => {
+              const inner = (
+                <>
+                  <div class="member-image" aria-hidden="true" />
+                  <h3>{p.data.name}</h3>
+                  <p>{p.data.role}</p>
+                </>
+              );
+              return p.data.hasProfile
+                ? <a class="member" href={`/team/${p.id}`}>{inner}</a>
+                : <div class="member">{inner}</div>;
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+
+const panels = [
+  { title: 'Stewardship', text: 'Leadership sets direction with a clear focus on ethics, long-term resilience, and practical product impact.' },
+  { title: 'Oversight', text: 'Operational reviews and strategic planning are used to ensure the company remains aligned with its mission.' },
+  { title: 'Accountability', text: 'Teams are encouraged to work with rigor, clarity, and a strong sense of responsibility for quality and safety.' },
+];
+---
+
+<Base title="Governance" description="Somnex’s approach to responsible innovation and transparent decision-making.">
+  <div class="page">
+    <header class="page-header reveal">
+      <p class="eyebrow">Guiding principles</p>
+      <h1>Governance</h1>
+      <p>Somnex’s governance approach is centered on responsible innovation, transparent decision-making, and thoughtful stewardship of the technology we build and the communities we serve.</p>
+    </header>
+    <div class="grid">
+      {panels.map((p, i) => (
+        <section class="panel reveal" style={`--d:${i * 80}ms`}>
+          <h2>{p.title}</h2>
+          <p>{p.text}</p>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

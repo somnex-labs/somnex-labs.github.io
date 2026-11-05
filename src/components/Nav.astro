@@ -1,0 +1,28 @@
+---
+import { nav } from '../data/site';
+const path = Astro.url.pathname.replace(/\.html$/, '') || '/';
+---
+
+<header class="site-nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">SOMNEX</a>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Main">
+      {nav.map((l) => <a href={l.href} aria-current={path === l.href ? 'page' : undefined}>{l.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const btn = document.querySelector<HTMLButtonElement>('.menu-btn');
+    const menu = document.getElementById('nav-menu');
+    if (!btn || !menu) return;
+    const set = (open: boolean) => {
+      menu.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    };
+    btn.addEventListener('click', () => set(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => set(false)));
+  });
+</script>

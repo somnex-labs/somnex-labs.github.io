@@ -1,25 +1,17 @@
 {
   "name": "somnex-labs.github.io",
-  "version": "1.0.0",
-  "description": "Welcome to the Somnex Inc. Gitpages repository.",
+  "version": "2.0.0",
+  "description": "The Somnex Inc. website.",
   "type": "module",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/output.css",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch",
-    "blog:update": "python3 scripts/generate-blog-index.py",
-    "blog:watch": "python3 scripts/generate-blog-index.py --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.5.2",
-    "postcss": "^8.5.16",
-    "tailwindcss": "^4.3.2"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "cms": "npx decap-server"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.4.7"
   }
 }

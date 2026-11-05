@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const people = await getCollection('team', (p) => p.data.hasProfile);
+  return people.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { name, role, team, focus, currentWork } = entry.data;
+const { Content } = await render(entry);
+---
+
+<Base title={name} description={`${name} — ${role} at Somnex.`}>
+  <div class="page narrow">
+    <section class="panel reveal">
+      <p class="eyebrow">{team} Team</p>
+      <h1 style="font-size:clamp(2rem,6vw,3rem);font-weight:300">{name}</h1>
+      <p class="role">{role}</p>
+      <Content />
+      {(focus || currentWork) && (
+        <div class="profile-meta">
+          {focus && <div><strong>Focus</strong><p>{focus}</p></div>}
+          {currentWork && <div><strong>Current work</strong><p>{currentWork}</p></div>}
+        </div>
+      )}
+    </section>
+    <a class="back-link" href="/our-team">← Back to Our Team</a>
+  </div>
+</Base>

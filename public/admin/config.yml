@@ -1,0 +1,70 @@
+# Decap CMS — a WordPress-style editor at /admin that commits straight to this repo.
+# See readme.md ("Editing content") for the one-time GitHub login setup.
+backend:
+  name: github
+  repo: somnex-labs/somnex-labs.github.io
+  branch: main
+  # base_url: https://YOUR-OAUTH-PROXY.example.workers.dev   # set after deploying the OAuth proxy
+
+# Run `npm run cms` and open /admin on localhost to edit without any login.
+local_backend: true
+
+publish_mode: editorial_workflow   # posts go through a draft → review → publish flow (opens a PR)
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: src/content/blog
+    extension: md
+    create: true
+    slug: '{{slug}}'
+    sortable_fields: [date, title]
+    summary: '{{date}} — {{title}}'
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD }
+      - { name: eyebrow, label: Small label above the title, widget: string, required: false }
+      - { name: tags, label: Tags, widget: list, default: [] }
+      - { name: excerpt, label: Excerpt (shown on the blog page), widget: text }
+      - { name: intro, label: Intro (shown under the post title), widget: text, required: false }
+      - { name: image, label: Featured image, widget: image, required: false }
+      - { name: imageAlt, label: Image description, widget: string, required: false }
+      - { name: draft, label: Draft (hide from site), widget: boolean, default: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: team
+    label: Team members
+    label_singular: Team member
+    folder: src/content/team
+    extension: md
+    create: true
+    slug: '{{slug}}'
+    summary: '{{name}} — {{role}}'
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: role, label: Role, widget: string }
+      - { name: team, label: Team, widget: select, options: [Software, Hardware, Business] }
+      - { name: order, label: Order within team, widget: number, default: 0, value_type: int }
+      - { name: hasProfile, label: Has its own profile page, widget: boolean, default: true }
+      - { name: focus, label: Focus, widget: string, required: false }
+      - { name: currentWork, label: Current work, widget: string, required: false }
+      - { name: body, label: Bio, widget: markdown, required: false }
+
+  - name: legal
+    label: Legal pages
+    files:
+      - label: Privacy Policy
+        name: privacy-policy
+        file: src/content/legal/privacy-policy.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+      - label: Terms of Use
+        name: terms-of-use
+        file: src/content/legal/terms-of-use.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
