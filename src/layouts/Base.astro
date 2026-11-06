@@ -23,11 +23,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#09090b" />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" href="/logo-image.png" type="image/png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" href="/fonts/heliosext.woff" as="font" type="font/woff" crossorigin />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/logo-image.png', Astro.site)} />
+    <meta property="og:image" content={new URL('/og-image.png', Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <title>{fullTitle}</title>
     <script is:inline>document.documentElement.classList.add('js');</script>
     <ClientRouter />
