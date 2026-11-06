@@ -1,10 +1,10 @@
 ---
 name: Varshith Gunjapally
-role: COO
+role: Chief Operating Officer
 team: Business
 order: 1
-focus: Relationship building, market alignment, and go-to-market planning.
-currentWork: Strengthening early deployments and ecosystem partnerships.
+focus: Market research and finding clients.
+currentWork: Developing the business plan and shaping the design and direction of the company.
 ---
 
-Varshith connects the team’s strategy with operational execution, helping Somnex move with clarity and momentum.
+Varshith is a business and math student at NYU. He develops the Somnex business plan, finds clients, conducts market research, and works on the design and direction of the company.

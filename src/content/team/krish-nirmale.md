@@ -1,10 +1,10 @@
 ---
 name: Krish Nirmale
-role: CEO
+role: Chief Executive Officer
 team: Hardware
 order: 1
-focus: Embedded systems, sensing hardware, and prototyping.
-currentWork: Refining the device stack for high-fidelity immersive tests.
+focus: Optics and vertical integration.
+currentWork: Developing a testing platform for the optics he is working on.
 ---
 
-Krish oversees hardware integration and device reliability, ensuring the physical layer performs with the same care as the software experience.
+Krish studies mechanical engineering at UCLA and has worked with Formula Bruin, UCLA's Formula SAE racing team. He brings that hands-on engineering background to Somnex, overseeing hardware integration and device reliability.

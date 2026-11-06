@@ -1,10 +1,10 @@
 ---
 name: Deep Singh
-role: CTO
+role: Chief Technology Officer
 team: Software
 order: 1
-focus: Interaction design, frontend architecture, and performance.
-currentWork: Building the adaptive control surfaces for immersive workflows.
+focus: The critical functionality of the software, making sure the core of the platform works reliably.
+currentWork: Creating a framework to more effectively build digital twin functionality.
 ---
 
-Deep leads the practical functionality layer of the platform, translating product goals into reliable, usable experiences.
+Deep studied computer science at Cal Poly San Luis Obispo and previously worked at JT4, where he built experience in engineering software for demanding, real-world systems. He brings that background to Somnex, translating product goals into reliable, usable software.

@@ -291,6 +291,8 @@ a.member:hover h3 { color: var(--lime); }
 .member p { font-size: 0.8rem; color: var(--dim); margin: 0; }
 @media (max-width: 600px) { .member-image { aspect-ratio: 16 / 9; } .member-image::before { inset: 14% auto 14% 50%; aspect-ratio: 1; transform: translateX(-50%); } }
 
+.profile-head { display: grid; grid-template-columns: 180px 1fr; gap: 1.5rem; align-items: end; margin-bottom: 1.25rem; }
+@media (max-width: 600px) { .profile-head { grid-template-columns: 1fr; } }
 .profile-meta { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 1.5rem; }
 .profile-meta > div { padding: 1rem; background: var(--bg-3); border: 1px solid var(--line); border-left: 3px solid var(--lime); }
 .profile-meta strong { font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--lime); }
