@@ -17,6 +17,7 @@ npm run build      # outputs to dist/
 | `src/components/` | Nav, footer, placeholder-page template. |
 | `src/styles/global.css` | All styling and the brand palette (CSS variables at the top). |
 | `src/content/blog/` | Blog posts, one Markdown file each. |
+| `src/content/archive/` | Retired content kept out of the site. Move a file back to `src/content/blog/` to republish. |
 | `src/content/team/` | Team members, one Markdown file each. |
 | `src/content/legal/` | Privacy policy and terms of use. |
 | `src/data/site.ts` | Nav links, footer columns, team group descriptions. |

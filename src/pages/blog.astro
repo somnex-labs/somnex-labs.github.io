@@ -16,7 +16,9 @@ const fmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', 
       <p>Read the latest updates, product notes, and milestones from the Somnex team.</p>
     </header>
 
-    <div class="filters reveal" id="filters" role="group" aria-label="Filter posts by tag">
+    {posts.length === 0 && <p class="reveal">No updates yet. Check back soon.</p>}
+
+    <div class="filters reveal" hidden={posts.length === 0} id="filters" role="group" aria-label="Filter posts by tag">
       <button class="filter-btn" type="button" data-tag="" aria-pressed="true">All</button>
       {tags.map((t) => <button class="filter-btn" type="button" data-tag={t} aria-pressed="false">{t}</button>)}
     </div>
